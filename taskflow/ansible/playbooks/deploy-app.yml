@@ -15,6 +15,7 @@
         cmd: npm run build
         chdir: "{{ playbook_dir }}/.."
         creates: "{{ playbook_dir }}/../dist/index.html"
+      changed_when: false
 
 - name: Déployer TaskFlow sur les serveurs web
   hosts: web
